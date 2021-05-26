@@ -13,19 +13,26 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (max-width: 720) {
+  @media (max-width: 720px) {
     html {
       font-size: 87.5%;
     }
   }
 
-  html {
-    height: 100vh;
-    width: 100vw;
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   body, input, textarea, button {
     font: 500 1rem Inter sans-serif;
+    font-family: Montserrat, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   h1 {
@@ -38,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    font-family: Lexend, sans-serif;
+    font-family: Montserrat, sans-serif;
   }
 
   button {
