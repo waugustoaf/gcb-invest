@@ -102,7 +102,7 @@ export const Home: React.FC = () => {
 
       <BlogPosts>
         <span>
-          <h2>Read Out Blog</h2>
+          <h2>Read Our Blog</h2>
           <p>
             Far far away, behind the word mountains, far from the countries{' '}
             <br />
