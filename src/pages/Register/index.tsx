@@ -11,6 +11,7 @@ import { AiOutlineNumber } from 'react-icons/ai';
 import * as Yup from 'yup';
 import { getValidationErrors } from '../../utils/getValidationErrors';
 import { api } from '../../services/api';
+import { Redirect } from 'react-router';
 
 interface SubmitProps {
   name: string;
@@ -31,6 +32,7 @@ interface CEPProps {
 
 export const Register: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const [canRedirect, setCanRedirect] = useState(false);
 
   const [streetField, setStreetField] = useState('');
   const [cityField, setCityField] = useState('');
@@ -79,6 +81,7 @@ export const Register: React.FC = () => {
       });
 
       localStorage.setItem('@HealthyFood:user', JSON.stringify(data));
+      setCanRedirect(true);
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err);
@@ -87,6 +90,10 @@ export const Register: React.FC = () => {
       }
     }
   };
+
+  if(canRedirect) {
+    return <Redirect to="/" />
+  }
 
   return (
     <Container>
