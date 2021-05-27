@@ -1,46 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img src="https://i.imgur.com/fPfeTw6.png" alt="Origin" width="250px">
+</h1>
 
-## Available Scripts
+[We are ONLINE, try Now](https://healthy-food-gcb.netlify.app/) :tada:<br>
 
-In the project directory, you can run:
 
-### `yarn start`
+<h3 align="center">
+  Let's eat healthy food and improve your life!
+</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction_worker-installation">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bug-issues">Issues</a>&nbsp;&nbsp;&nbsp;
+</p>
+<h1 />
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+	<img src="https://i.imgur.com/NBrnQnM.png" width="250px" alt="Healthy Food">
+	<img src="https://i.imgur.com/wUmD7hG.png" width="250px" alt="Healthy Food">
+	<img src="https://i.imgur.com/uGs77pg.png" width="250px" alt="Healthy Food">
+</p>
+<p align="center">
+	<img src="https://i.imgur.com/i9zIbLC.png" width="250px" alt="Healthy Food">
+	<img src="https://i.imgur.com/ODZSm6Z.png" width="250px" alt="Healthy Food">
+	<img src="https://i.imgur.com/eBUaYx1.png" width="250px" alt="Healthy Food">
+</p>
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :house: About the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A website where you can find recipes and healthy food tips.
+<br>
 
-### `yarn eject`
+## :computer: Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Netlify](https://www.netlify.com/)
+- [Unform](https://unform.dev/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# :construction_worker: Installation
 
-## Learn More
+**You need to install [Node.js](https://nodejs.org/en/download/) first, then in order to clone the project via HTTPS, run this command:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```$ git clone https://github.com/waugustoaf/healthy-food.git```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+**Install dependencies**
+
+```$ npm install```
+
+<br>
+
+# :runner: Getting Started
+
+Run the following command in order to start the application in a development environment:
+
+```$ npm run start```
+
+<br>
+
+
+# :bug: Issues
+
+Feel free to **file a new issue** with a respective title and description on the [Origin Take-Home Assignment](https://github.com/waugustoaf/healthy-food/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!.
+
+<br>
+
+
+
+
+
+Made with ♥ by waugustoaf - Augusto Fernandes :wave: [Get in touch!](https://www.linkedin.com/in/waugustoaf/)
+t
