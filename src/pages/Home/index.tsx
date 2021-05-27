@@ -1,4 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { FaSearch } from 'react-icons/fa';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import { BlogTopic } from '../../components/BlogTopic';
+import { Header } from '../../components/Header';
+import { Recipe } from '../../components/Recipe';
+import { images } from '../../services/images';
 import {
   BeMember,
   BestRecipes,
@@ -8,27 +14,8 @@ import {
   SearchContainer,
   Services,
 } from './styles';
-import ScrollContainer from 'react-indiana-drag-scroll';
-import { FaSearch } from 'react-icons/fa';
-import { Header } from '../../components/Header';
-import { Recipe } from '../../components/Recipe';
-import { BlogTopic } from '../../components/BlogTopic';
-import { images } from '../../services/images';
 
 export const Home: React.FC = () => {
-  useEffect(() => {
-    document
-      .querySelector('#items')
-      ?.addEventListener('wheel', (event: any) => {
-        event.preventDefault();
-        if (event.deltaY > 0) {
-          event.target.scrollBy(100, 0);
-        } else {
-          event.target.scrollBy(-100, 0);
-        }
-      });
-  }, []);
-
   return (
     <Container>
       <img src={images.Illustration} alt='Healthy Food' />
@@ -91,8 +78,8 @@ export const Home: React.FC = () => {
               Semantics, a large language ocean.
             </p>
             <p>
-              A small river named Duden flows by their place and supplies it with
-              the necessary regelialia.
+              A small river named Duden flows by their place and supplies it
+              with the necessary regelialia.
             </p>
           </span>
 

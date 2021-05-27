@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, HeaderContainer } from './styles';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 
+interface UserProps {
+  CEP: string;
+  CPF: string;
+  UF: string;
+  born: string;
+  city: string;
+  name: string;
+  number: string;
+  street: string;
+}
+
 export const Header: React.FC = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [user, setUser] = useState<UserProps | null>({} as UserProps);
+
+  useEffect(() => {
+    const localStorageResponse = localStorage.getItem('@HealthyFood:user');
+    if (!localStorageResponse) {
+      setUser(null);
+      return;
+    }
+    setUser(JSON.parse(localStorageResponse) as UserProps);
+  }, []);
 
   const handleToggleMenu = () => {
     setIsMenuVisible(previousValue => !previousValue);
-  }
+  };
 
   return (
     <HeaderContainer>
@@ -16,17 +37,21 @@ export const Header: React.FC = () => {
       </a>
 
       <div>
-        <Button type='button'>
+        <Button to='/'>
           <span>Healthy Recipes</span>
         </Button>
-        <Button type='button'>
+        <Button to='/'>
           <span>Blog</span>
         </Button>
-        <Button type='button'>
+        <Button to='/'>
           <span>Join</span>
         </Button>
-        <Button type='button' main={1}>
-          <span>Register</span>
+        <Button to={user ? '/' : '/register'} main={1}>
+          <span>
+            {user && user.name
+              ? `Hello, ${user.name.split(' ')[0]}`
+              : 'Register'}
+          </span>
         </Button>
       </div>
 
@@ -40,17 +65,23 @@ export const Header: React.FC = () => {
 
       {isMenuVisible && (
         <div className='menu'>
-          <Button type='button' secondary={isMenuVisible ? 1 : 0}>
+          <Button to='/' secondary={isMenuVisible ? 1 : 0}>
             <span>Healthy Recipes</span>
           </Button>
-          <Button type='button' secondary={isMenuVisible ? 1 : 0}>
+          <Button to='/' secondary={isMenuVisible ? 1 : 0}>
             <span>Blog</span>
           </Button>
-          <Button type='button' secondary={isMenuVisible ? 1 : 0}>
+          <Button to='/' secondary={isMenuVisible ? 1 : 0}>
             <span>Join</span>
           </Button>
-          <Button type='button' main={1} secondary={isMenuVisible ? 1 : 0}>
-            <span>Register</span>
+          <Button
+            to={user ? '/' : '/register'}
+            main={1}
+            secondary={isMenuVisible ? 1 : 0}
+          >
+            <span>
+              {user ? `Hello, ${user.name.split(' ')[0]}` : 'Register'}
+            </span>
           </Button>
         </div>
       )}

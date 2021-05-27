@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 interface ButtonProps {
@@ -46,6 +47,11 @@ export const HeaderContainer = styled.header`
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+    
+    }
   }
 
   @media screen and (max-width: 880px) {
@@ -61,12 +67,11 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const Button = styled.button<ButtonProps>`
-  border: none;
-  outline: none;
+export const Button = styled(Link)<ButtonProps>`
+  text-decoration: none;
+  cursor: pointer;
   background-color: transparent;
   transition: opacity 0.2s;
-  margin-top: ${props => !!props.secondary ? '2rem' : '0'};
 
   &:hover {
     opacity: 0.9;
@@ -78,8 +83,9 @@ export const Button = styled.button<ButtonProps>`
     font-size: 1rem;
   }
 
-  & + button {
-    margin-left: ${props => !!props.secondary ? '0' : '1.5rem' };
+  & + a {
+    margin-top: ${props => (!!props.secondary ? '1.5rem' : '0')};
+    margin-left: ${props => (!!props.secondary ? '0' : '1.5rem')};
   }
 
   ${props =>
